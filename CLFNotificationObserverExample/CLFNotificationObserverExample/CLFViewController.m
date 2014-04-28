@@ -75,7 +75,7 @@
 
 - (void)dealloc
 {
-    // Get rid of our notification observer. Because the category handles the strongSelf/weakSelf dance for us we
+    // Get rid of our notification observer. Because the category handles the weakSelf/strongSelf dance for us we
     // don't have to worry about dealloc never being called due to a retain loop.
 
     [self clf_releaseNotificationObserver:&_applicationWillEnterForegroundObserver];
