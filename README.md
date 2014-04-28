@@ -43,7 +43,7 @@ Example Usage:
     NSArray *colorNames =
         @[ @"red", @"green", @"blue", @"cyan", @"yellow", @"magenta", @"orange", @"purple", @"brown" ];
 
-    NSString *colorName = colorNames[arc4random() % colorNames.count];
+    NSString *colorName = colorNames[arc4random_uniform(colorNames.count)];
     SEL colorSelector = NSSelectorFromString([colorName stringByAppendingString:@"Color"]);
 
     return [UIColor performSelector:colorSelector];
